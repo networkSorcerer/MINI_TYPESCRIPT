@@ -6,28 +6,18 @@
 // ------
 // symbol
 // bigint
-
-let a: number = 3
-a = 4
-a= 9.0
-a= -8.8
-
+var a = 3;
+a = 4;
+a = 9.0;
+a = -8.8;
 // let b: boolean = true
 // b = false
-
-let b = true
+var b = true;
 // 자동으로 타입을 추론 할수 있음 하지만 
 // 그렇게 사용 안하는 게 좋음 
-
-let c :null = null
-
-let d : undefined = undefined
-
-function double(n:number):number{
-  return n*2
+var c = null;
+var d = undefined;
+function double(n) {
+    return n * 2;
 }
-// function double(n:number):void{
-//   let n*2
-// }
-
 console.log(double(3));
