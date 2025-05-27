@@ -8,9 +8,9 @@ enum Gender {
 let gender:Gender = Gender.FEMALE;
 
 enum SearchType {
-    Date, // 0
-    KEYWORD, // 1
-    ORDER, // 2
+    Date ="Date", // 0
+    KEYWORD = "Keyword", // 1
+    ORDER = "Order", // 2
 }
 
 console.log("hey", SearchType.ORDER);

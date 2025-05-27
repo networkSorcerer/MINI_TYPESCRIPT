@@ -7,8 +7,8 @@ var Gender;
 var gender = Gender.FEMALE;
 var SearchType;
 (function (SearchType) {
-    SearchType[SearchType["Date"] = 0] = "Date";
-    SearchType[SearchType["KEYWORD"] = 1] = "KEYWORD";
-    SearchType[SearchType["ORDER"] = 2] = "ORDER";
+    SearchType["Date"] = "Date";
+    SearchType["KEYWORD"] = "Keyword";
+    SearchType["ORDER"] = "Order";
 })(SearchType || (SearchType = {}));
 console.log("hey", SearchType.ORDER);
