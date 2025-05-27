@@ -1,6 +1,9 @@
-function stringifyValue(a:string|null|undefined) {
+function stringifyValue(value:string|null|undefined):string {
   // 여기에 구현
-  return a;
+  if(value === null || value === undefined){
+    return "값이 없습니다.";
+  }
+  return value;
 }
 
 // 함수 호출
