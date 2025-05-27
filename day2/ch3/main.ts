@@ -23,3 +23,17 @@ let c : TStudent={name:"noona",age:23}
 
 let d : {name:string|number|boolean, age?:number} ={name:"asd",age:12}
 let e : {name:string|number|boolean, age?:number} = {name:"adsf"}
+
+interface IPerson{
+    name:string;
+    age:number;
+    gender:string;
+}
+
+interface IForeigner extends IPerson{
+    // name:string;
+    // age:number;
+    // gender:string;
+
+    nationality:string;
+}
