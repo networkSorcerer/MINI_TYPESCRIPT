@@ -16,7 +16,7 @@ interface SearchResponse {
 
 let results : SearchResult[] = [{title:"hello", releaseDate:"2024"},{name:"hello", releaseDate:"2025"}]
 
-function getName(result:TTrack|TArtist){
+function getName1(result:TTrack|TArtist){
     return result;
 }
 
