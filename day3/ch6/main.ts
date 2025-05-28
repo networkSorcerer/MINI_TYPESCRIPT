@@ -1,43 +1,68 @@
-
-
-interface IStudent { // 객체만 가능한 부분
-    name: string;
-    age?:number;
-    isStudent?:boolean;
-}
-
-type TStudent = {
-    name:string,
-    age?:number
-}
-
-type NewType = number | string // 원시타입도 가능, 튜플 타입 
-
-type Tuple = [number,string,boolean]
-
-let b : IStudent = {name:"noona",age:34}
-//let b : {name:string|number|boolean, age?:number} = {name:"noona",age:34}
-
-let c : TStudent={name:"noona",age:23}
-// let c : {name:string,age:number}={name:"noona",age:23}
-
-let d : {name:string|number|boolean, age?:number} ={name:"asd",age:12}
-let e : {name:string|number|boolean, age?:number} = {name:"adsf"}
-
-interface IPerson{
+type TProduct = {
+    id:string;
     name:string;
-    age:number;
-    gender:string;
+    price:number;
+    discount?:number;
 }
 
-interface IForeigner extends IPerson{
-    // name:string;
-    // age:number;
-    // gender:string;
 
-    nationality:string;
+type TDiscountProduct = TProduct & {discountRatio: number}
+
+interface IProduct {
+    id:string;
+    name:string;
+    price:number;
+    
 }
 
-type TForeigner = IPerson & {nationality:string,period:Date}
+interface IDiscountProduct extends IProduct {
+    discountRatio: number;
+}
 
-let american : IForeigner={nationality:"american",name:"jacob",age:23,gender:"F"}
+type Popularity = {
+    rate : number
+}
+
+interface Review {
+    review:number
+}
+
+type Filter = Popularity & Review
+
+let filter : Filter= {
+    rate : 2.3,
+    review:3
+}
+
+interface IFilter extends Popularity, Review {
+
+}
+
+interface IProduct2 {
+    img:string;
+    name: string;
+    description:string;
+    discountPercent?:number;
+}
+
+interface ISalesProduct extends IProduct2 {
+    discountPercent?:number
+}
+
+type ApiResponse = {
+    products:IProduct2[],
+    salesProducts:ISalesProduct[], 
+}
+
+const apiResponse :ApiResponse = {
+    products : [
+        {img:"pants.png",name:"나팔바지",description:"24년 신상"},
+        {img:"shirts.png",name:"셔츠",description:"24년 신상"}
+    ],
+    salesProducts:[
+        {img:"jacket.png",name:"자켓",description:"시즌상품",discountPercent:20},
+        {img:"cap.png",name:"모자",description:"시즌상품",discountPercent:10}
+    ]
+}
+
+// apiResponse.map(item=>item.discountPercent)
