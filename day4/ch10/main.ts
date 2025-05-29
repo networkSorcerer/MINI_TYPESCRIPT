@@ -83,4 +83,14 @@ let movieData: MovieResponse = {
 // function useState<S>(initialState:S | (()=> S)):[S, Dispatch<SetStateAction>]
 // const [value, setValue] = useState(true);
 
-const [value2, setValue2] = useState<boolean>(false);
+// const [value2, setValue2] = useState<boolean>(false);
+
+interface Length {
+  length: number;
+}
+
+function getValue<T extends Length>(data: T) {
+  console.log(data.length);
+}
+
+console.log(getValue("hello"));
