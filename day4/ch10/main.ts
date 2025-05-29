@@ -76,3 +76,11 @@ let movieData: MovieResponse = {
     { title: "7번방의기적", genre: "가족" },
   ],
 };
+
+// function useState<T>(초기화값:T):[T,함수<T>]{
+//   return [값, 함수]
+// }
+// function useState<S>(initialState:S | (()=> S)):[S, Dispatch<SetStateAction>]
+// const [value, setValue] = useState(true);
+
+const [value2, setValue2] = useState<boolean>(false);
