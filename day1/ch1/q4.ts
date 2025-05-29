@@ -4,7 +4,7 @@ function stringifyValue(value:string|null|undefined):string {
     return "값이 없습니다.";
   }
   return value;
-}
+}   
 
 // 함수 호출
 console.log(stringifyValue("Hello")); // "Hello"
